@@ -1,0 +1,91 @@
+:root{
+    --secondary-background: rgb(189, 255, 189);
+    --shadow-color: rgba(0, 0, 0, 0.25);
+}
+
+*{
+    box-sizing: border-box;
+}
+
+body{
+    background-color: white;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    margin: 0;
+    padding: 0;
+}
+
+div.options{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    background-color: violet;
+    background-color: var(--secondary-background);
+    box-shadow: 0 8px 10px 0 var(--shadow-color);
+}
+
+div.options button{
+    background-color: var(--secondary-background);
+    border: none;
+    padding: 5px;
+}
+
+div.calculator{
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    width: 60%;
+    margin: 5% 20%;
+    box-shadow: 0 8px 16px 0 var(--shadow-color), 0 12px 40px 0 var(--shadow-color);
+}
+
+div.calculator input{
+    font-size: xx-large;
+    padding: 5%;
+    border: none;
+    background-color: var(--secondary-background);
+    grid-column: 1 / 5;
+    text-align: right;
+    color: black;
+}
+
+div.calculator button{
+    padding: 10px;
+    font-size: xx-large;
+    background-color: white;
+    color: black;
+    border: none;
+}
+
+div.calculator button:hover, div.options button:hover{
+    background-color: black;
+    color: white;
+}
+
+div.extended{
+    grid-column: 1 / 5;
+    display: none;
+    grid-template-columns: auto auto auto auto auto;
+}
+
+div.numbers{
+    grid-column: 1 / 4;
+    display: grid;
+    grid-template-columns: auto auto auto;
+}
+
+div.operators{
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-column: 4 / 5;
+}
+
+@media screen and (max-width: 700px){
+    div.calculator{
+        width: 100%;
+        margin: auto;
+        box-shadow: none;
+    }
+
+}
+
