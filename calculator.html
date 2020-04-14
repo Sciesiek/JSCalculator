@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Calculator</title>
     <link rel="stylesheet" href="css/main.css">
 </head>
 <body>
@@ -14,11 +14,10 @@
     <div class="calculator">
         <input type="text" id="input01" disabled>
         <div class="extended">
-            <button>log</button>
-            <button>x<span class="y">y</span></button>
-            <button>&#8730;</button>
-            <button onclick="input('!')">x!</button>
-            <button>ln</button>
+            <button onclick="calculatePow()">x<span class="square"><sup>2</sup></span></button>
+            <button onclick="calculateSquare()">&#8730;</button>
+            <button onclick="calculateFactorial('')">x!</button>
+            <button onclick="calculateLn()">ln</button>
         </div>
         <div class="numbers">
             <button onclick="input('1')">1</button>
@@ -30,9 +29,9 @@
             <button onclick="input('7')">7</button>
             <button onclick="input('8')">8</button>
             <button onclick="input('9')">9</button>
-            <button onclick="input(' (')">(</button>
+            <button onclick="input('(')">(</button>
             <button onclick="input('0')">0</button>
-            <button onclick="input(') ')">)</button>
+            <button onclick="input(')')">)</button>
         </div>
         <div class="operators">
             <button onclick="input(' - ')">-</button>
@@ -41,13 +40,11 @@
             <button onclick="input(' / ')">/</button>
             <button onclick="input('.')">.</button>
             <button onclick="input(' % ')">%</button>
-            <button onclick="calculates()">=</button>
             <button onclick="clearInput()">C</button>
-        </div>
-
-        
+            <button onclick="clearWholeInput()">CA</button>
+            <button id="calculateButton" onclick="calculate()">=</button>
+        </div>        
     </div>
     <script src="/js/main.js"></script>
-    
 </body>
 </html>
